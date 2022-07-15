@@ -4,7 +4,7 @@
 
 - [Overview](#overview)
   - [Suit landing page](#suite-landing-page)
-  - [Technologies used](#technologies use)
+  - [Technologies](#technologies use)
 - [My process](#my-process)
   - [Develop with](#develop-with)
   - [What I learned](#what-i-learned)
