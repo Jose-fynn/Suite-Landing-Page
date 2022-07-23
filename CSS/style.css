@@ -116,52 +116,15 @@ select{
     --hero-description-margin: 2rem;
     --review-description-margin: 2.5rem;
     --header-width: 1.5rem;
-
-    @media (min-width: 48em){
-        --font-size-heading-xl:3.5rem;
-        --line-height-heading-xl: 4rem;
-        --letter-space-heading-xl: -0.048611125rem;
-
-        --font-size-heading-h3: 3rem;
-        --line-height-heading-h3: 3.5rem;
-        --letter-space-heading-h3: -0.03125rem;
-
-        --btn-font-size: 1rem;
-        --btn-line-height: 2rem;
-        --btn-letter-space: -0.01rem;
-
-        --review-description-margin: 2.5rem;
-
-        --container-width: 2.5rem;
-        --review-width: 3.5rem;
-        --header-width: 2.5rem;
-    }
-
-    @media (min-width: 90em){
-        --font-size-heading-xl: 4.2rem;
-        --line-height-heading-xl: 4.875rem;
-        --letter-space-heading-xl: 0.0625rem;
-
-        --font-size-quote: 1.125rem;
-        --line-height-quote: 2.1875rem;
-        --letter-space-quote: 0.00325rem;
-
-        --font-size-body: 1.125rem;
-        --line-height-body: 2rem;
-        --letter-space-body: 0.00325rem;
-
-        --container-width: 10.375rem;
-        --review-width: 7.8125rem;
-        --curved-line-2-width: 3.5rem;
-        --header-width: 3.2rem;
-    }
+    --title-character:15ch;
+    --description-character:35ch;
 
 }
 
 body{
     font-family: var(--font-family);
     background-color: var(--light-cream-clr);
-    /* max-width: 90rem; */
+    max-width: 90rem;
     margin: auto;
     position: relative;
 }
@@ -225,6 +188,7 @@ body{
 
 .hero-title-top{
     padding-top: var(--curved-line-width);
+    max-width: var(--title-character);
 }
 
 .hero-title-bold{
@@ -254,7 +218,7 @@ body{
 }
 
 .hero-description{
-    max-width: 40ch;
+    max-width: var(--description-character);
 }
 
 .hero-description-light{
@@ -437,6 +401,25 @@ body{
 
 
 @media (min-width:48em){
+    :root{
+        --font-size-heading-xl:3.5rem;
+        --line-height-heading-xl: 4rem;
+        --letter-space-heading-xl: -0.048611125rem;
+
+        --font-size-heading-h3: 3rem;
+        --line-height-heading-h3: 3.5rem;
+        --letter-space-heading-h3: -0.03125rem;
+
+        --btn-font-size: 1rem;
+        --btn-line-height: 2rem;
+        --btn-letter-space: -0.01rem;
+
+        --review-description-margin: 2.5rem;
+
+        --container-width: 2.5rem;
+        --review-width: 3.5rem;
+        --header-width: 2.5rem;
+    }
     .hero{
         display: grid;
         grid-template-columns: 1fr 0.25fr 0.5fr;
@@ -495,6 +478,26 @@ body{
     }
 
     @media (min-width:90em){
+        :root{
+            --font-size-heading-xl: 4.2rem;
+            --line-height-heading-xl: 4.875rem;
+            --letter-space-heading-xl: 0.0625rem;
+    
+            --font-size-quote: 1.125rem;
+            --line-height-quote: 2.1875rem;
+            --letter-space-quote: 0.00325rem;
+    
+            --font-size-body: 1.125rem;
+            --line-height-body: 2rem;
+            --letter-space-body: 0.00325rem;
+    
+            --container-width: 10.375rem;
+            --review-width: 7.8125rem;
+            --curved-line-2-width: 3.5rem;
+            --header-width: 3.2rem;
+            --title-character:40ch;
+            --description-character:30ch;
+        }
         .hero{
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -544,7 +547,13 @@ body{
         .review-description-margin{
             margin: var(--review-description-margin) 0;
         }
+
+        .review-description-ch {
+            max-width: 28ch;
+          }
+
         .review-quote{
+            padding-top: 3rem;
             padding-left: 0;
         }
         .review-image{
